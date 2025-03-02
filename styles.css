@@ -1,0 +1,152 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px; /* Limitar el ancho máximo */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 400px; /* Limitar el ancho del contenedor */
+  margin-bottom: 20px;
+}
+
+#board {
+  display: grid;
+  grid-template-rows: repeat(6, 60px); /* Tamaño fijo para las filas */
+  grid-gap: 5px;
+  margin-bottom: 20px;
+  justify-content: center; /* Centrar el tablero horizontalmente */
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(5, 60px); /* Tamaño fijo para las columnas */
+  grid-gap: 5px;
+}
+
+.cell {
+  width: 60px; /* Tamaño fijo para las celdas */
+  height: 60px; /* Tamaño fijo para las celdas */
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Tamaño de fuente fijo */
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #fff;
+  box-sizing: border-box;
+  line-height: 60px; /* Centrar texto verticalmente */
+}
+
+#guess-input {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#reset-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+#reset-button:hover {
+  background-color: #c9302c;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#hint {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #d9534f;
+}
+
+#description {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  font-style: italic;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  max-width: 100%;
+}
+
+.instructions {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 600px) {
+  .main-container {
+      flex-direction: column;
+  }
+
+  .instructions {
+      order: 2; /* Mueve las instrucciones al final */
+      margin-top: 20px;
+  }
+
+  .container {
+      order: 1; /* Mueve el juego al principio */
+  }
+
+  .cell {
+      width: 50px; /* Reducir el tamaño de las celdas en pantallas pequeñas */
+      height: 50px;
+      font-size: 20px; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+      line-height: 50px; /* Ajustar el line-height */
+  }
+
+  #guess-input, #submit-button, #reset-button {
+      font-size: 14px; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+  }
+
+  #message, #hint, #description {
+      font-size: 14px; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+  }
+}
