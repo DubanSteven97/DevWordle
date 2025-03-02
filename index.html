@@ -10,6 +10,23 @@
   <div class="main-container">
     <div class="container">
       <h1>DevWordle</h1>
+      <div class="instructions">
+        <h2>¿Cómo se juega?</h2>
+        <p>
+          El objetivo del juego es adivinar una palabra de 5 letras en un máximo de 6 intentos, <br> sobre conceptos de programación.
+        </p>
+        <p>
+          Después de cada intento, recibirás pistas:
+        </p>
+        <ul>
+          <li><span style="color: #6aaa64;">Verde</span>: La letra está en la palabra y en la posición correcta.</li>
+          <li><span style="color: #c9b458;">Amarillo</span>: La letra está en la palabra, pero en la posición incorrecta.</li>
+          <li><span style="color: #787c7e;">Gris</span>: La letra no está en la palabra.</li>
+        </ul>
+        <p>
+          ¡Usa las pistas para adivinar la palabra correcta antes de que se acaben los intentos!
+        </p>
+      </div>
       <p id="total-points">Puntos totales: 0</p> <!-- Nuevo elemento para mostrar puntos -->
       <div id="board"></div>
       <input type="text" id="guess-input" maxlength="5" placeholder="Ingresa una palabra">
@@ -18,24 +35,6 @@
       <p id="message"></p>
       <p id="hint"></p>
       <p id="description"></p>
-    </div>
-
-    <div class="instructions">
-      <h2>¿Cómo se juega?</h2>
-      <p>
-        El objetivo del juego es adivinar una palabra de 5 letras en un máximo de 6 intentos, <br> sobre conceptos de programación.
-      </p>
-      <p>
-        Después de cada intento, recibirás pistas:
-      </p>
-      <ul>
-        <li><span style="color: #6aaa64;">Verde</span>: La letra está en la palabra y en la posición correcta.</li>
-        <li><span style="color: #c9b458;">Amarillo</span>: La letra está en la palabra, pero en la posición incorrecta.</li>
-        <li><span style="color: #787c7e;">Gris</span>: La letra no está en la palabra.</li>
-      </ul>
-      <p>
-        ¡Usa las pistas para adivinar la palabra correcta antes de que se acaben los intentos!
-      </p>
     </div>
   </div>
   <script src="script.js"></script>

@@ -118,6 +118,7 @@ body {
   width: 100%;
   max-width: 400px;
   margin-top: 20px;
+  text-align: justify;
 }
 
 /* Media queries para pantallas pequeñas */
@@ -127,12 +128,12 @@ body {
   }
 
   .instructions {
-      order: 2; /* Mueve las instrucciones al final */
+      order: 1; /* Mueve las instrucciones al final */
       margin-top: 20px;
   }
 
   .container {
-      order: 1; /* Mueve el juego al principio */
+      order: 2; /* Mueve el juego al principio */
   }
 
   .cell {
