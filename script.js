@@ -33,6 +33,7 @@ let totalPoints = 0;
 function initializeBoard() {
   console.log(correctWord)
   board.innerHTML = "";
+  description.textContent = `Significado: ${correctDescription}`;
   for (let i = 0; i < MAX_ATTEMPTS; i++) {
     const row = document.createElement("div");
     row.className = "row";
@@ -93,14 +94,12 @@ function checkGuess() {
     const points = calculatePoints(currentAttempt + 1);
     totalPoints += points;
     message.textContent = `¡Felicidades! ¡Ganaste! Obtuviste ${points} puntos.`;
-    description.textContent = `Significado: ${correctDescription}`;
     totalPointsElement.textContent = `Puntos totales: ${totalPoints}`;
     endGame();
   } else {
     currentAttempt++;
     if (currentAttempt === MAX_ATTEMPTS) {
       message.textContent = `¡Perdiste! La palabra era: ${correctWord}`;
-      description.textContent = `Significado: ${correctDescription}`;
       endGame();
     } else {
       giveHint();
